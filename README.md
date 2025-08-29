@@ -51,3 +51,10 @@ This project incorporates:
    ```bash
    git clone https://github.com/angelkomarov/HR.LeaveManagement.Vert.git
    cd HR.LeaveManagement.Vert
+   ```
+---
+
+2. **Build the solution**
+```bash
+dotnet build HR.LeaveManagement.Vert.sln
+```
