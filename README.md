@@ -55,6 +55,31 @@ This project incorporates:
 ---
 
 2. **Build the solution**
+   ```bash
+   dotnet build HR.LeaveManagement.Vert.sln
+   ```
+3. **Run the API**
+   ```bash
+   dotnet run --project HR.LeaveManagement.Api
+   ```
+4. Access API documentation (Swagger UI, if configured) at:
+   ```bash
+   https://localhost:<port>/swagger
+   ```
+## Project Structure
 ```bash
-dotnet build HR.LeaveManagement.Vert.sln
+.
+├── HR.LeaveManagement.Api
+├── HR.LeaveManagement.Application (Features/… per slice)
+├── HR.LeaveManagement.Domain
+├── HR.LeaveManagement.Infrastructure
+├── HR.LeaveManagement.Persistence
+├── HR.LeaveManagement.Common
+└── HR.LeaveManagement.Vert.sln
 ```
+**Api**: Entry point defining Web API endpoints per feature slice <br>
+**Application**: Contains feature slices (commands, queries, handlers, validators)<br>
+**Domain**: Core entities and domain logic<br>
+**Infrastructure & Persistence**: Data access implementation, EF Core Contexts<br>
+**Common**: Shared utilities or services across slices<br>
+
