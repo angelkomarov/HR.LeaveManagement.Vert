@@ -10,7 +10,6 @@ A **Vertical Slice Architecture**–based ASP.NET Core Web API for leave managem
 - [Getting Started](#getting-started)  
 - [Project Structure](#project-structure)  
 - [Usage](#usage)  
-- [Contributing](#contributing)  
 - [License](#license)
 
 ---
@@ -77,9 +76,12 @@ This project incorporates:
 ├── HR.LeaveManagement.Common
 └── HR.LeaveManagement.Vert.sln
 ```
+## Usage
 **Api**: Entry point defining Web API endpoints per feature slice <br>
 **Application**: Contains feature slices (commands, queries, handlers, validators)<br>
 **Domain**: Core entities and domain logic<br>
 **Infrastructure & Persistence**: Data access implementation, EF Core Contexts<br>
 **Common**: Shared utilities or services across slices<br>
 
+## License
+This project is licensed under the MIT License.
