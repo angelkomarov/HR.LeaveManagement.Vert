@@ -25,6 +25,7 @@ namespace HR.LeaveManagement.Api.Features.LeaveRequest.Create
                 .GreaterThan(p => p.StartDate).WithMessage("{PropertyName} must be after {ComparisonValue}");
 
             RuleFor(p => p.LeaveTypeId)
+                .Cascade(CascadeMode.Stop)
                 .GreaterThan(0)
                 .MustAsync(async (id, token) => {
                     var leaveTypeExists = await _leaveTypeRepository.ExistsAsync(id);

@@ -22,6 +22,7 @@ namespace HR.LeaveManagement.Api.Features.LeaveAllocation.Create
                 .GreaterThanOrEqualTo(DateTime.Now.Year).WithMessage("{PropertyName} must be after {ComparisonValue}");
 
             RuleFor(p => p.LeaveTypeId)
+                .Cascade(CascadeMode.Stop)
                 .GreaterThan(0)
                 .MustAsync(async (id, token) =>
                 {

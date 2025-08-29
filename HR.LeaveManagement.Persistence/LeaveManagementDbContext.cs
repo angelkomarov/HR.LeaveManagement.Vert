@@ -18,6 +18,8 @@ namespace HR.LeaveManagement.Persistence
         {
         }
 
+        //??AK
+        //https://stackoverflow.com/questions/76324190/ef-core-7-0-error-add-the-entity-seed-to-x-and-specify-the-foreign-key-value
         //++AK1.3 override this DBContext method - executed when DB is been generated
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

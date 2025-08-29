@@ -6,7 +6,7 @@ using System.Text;
 
 namespace HR.LeaveManagement.Api.Features.LeaveAllocation.List
 {
-    //define query request - It inherits from Mediator IRequest and specifies what should return – DTO.
+    //defines query request - It inherits from Mediator IRequest and specifies what should return – DTO.
     public class LeaveAllocationListQuery : IRequest<List<LeaveAllocationDto>>
     {
         public LeaveAllocationFilterDto Filter { get; set; }
